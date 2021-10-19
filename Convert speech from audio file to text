@@ -1,0 +1,32 @@
+# In this code you will be able make simple program to convert the speech to text 
+# pip install SpeechRecognition
+# we will use tow library SpeechRecognition and os
+# os we will use it to check wether exist content inside the file or not
+
+'''
+python..
+conditions(if esle)
+with statement
+    try:
+    except:
+'''
+
+
+import speech_recognition as talk
+import os
+
+recognization = talk.Recognizer()
+path = 'speech.wav' # just put the path you want
+
+if os.stat(path).st_size == 0:
+        print('This is empty file')
+else:
+     with talk.AudioFile(path) as source:
+                try:
+                        audio = recognization.record(source)
+                        print(recognization.recognize_google(audio))
+                except talk.UnknownValueError:
+                        print('try another file')
+
+
+
