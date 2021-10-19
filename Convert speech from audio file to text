@@ -2,7 +2,7 @@
 # pip install SpeechRecognition
 # we will use tow library SpeechRecognition and os
 # os we will use it to check wether exist content inside the file or not
-
+# pip install pyaudio even if you have problem
 '''
 python..
 conditions(if esle)
