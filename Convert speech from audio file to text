@@ -9,6 +9,8 @@ conditions(if esle)
 with statement
     try:
     except:
+text To file
+open('namefile.txt','w')
 '''
 
 
@@ -24,7 +26,8 @@ else:
      with talk.AudioFile(path) as source:
                 try:
                         audio = recognization.record(source)
-                        print(recognization.recognize_google(audio))
+                        saveFile = open('speechToText.txt', 'w') # this to save the text in text file
+                        print(recognization.recognize_google(audio), file=saveFile)
                 except talk.UnknownValueError:
                         print('try another file')
 
